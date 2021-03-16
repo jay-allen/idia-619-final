@@ -1,0 +1,51 @@
+---
+title: Assignment 4 - Product Page
+layout: layouts/base.njk
+---
+
+    <main>
+        <div class="o-wrapper">
+            
+            <div class="o-split">
+                <h1>Week 4 - Product Page</h1>
+                <button class="c-cta" id="view-list">View List</button>
+            </div>
+            <div class="js-form-section">
+                <div class="o-split c-alert u-hidden" role="alert">
+                    <div>
+                        <h2>Attention</h2>
+                        <div>The Year Manufactured must be before 2008</div>
+                    </div>
+                    <button class="c-alert__dismiss-icon">
+                        <span class="">&times;</span>
+                        <span class="u-hidden-visually">Close</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="c-form__input-group">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" name="product-name" id="product-name">
+                    </div>
+                    <div class="c-form__input-group">
+                        <label for="year-manufactured">Year Manufactured</label>
+                        <span class="c-form__hint" id="manufactured-hint">Must be made before 2008</span>
+                        <input type="text" name="year-manufactured" id="year-manufactured" aria-describedby="manufactured-hint">
+                    </div>
+                    <button class="c-cta" type="submit">
+                        <span>&plus;</span>
+                        <span>Add</span>
+                    </button>
+                </form>
+            </div>
+            <div class="u-hidden js-view-list-section">
+                <h2>Product List</h2>
+                <div class="js-no-products u-hidden">No products have been entered.</div>
+                <ol class="js-product-list"></ol>
+            </div>
+
+        </div>
+    </main>
+    
+
+    
+    <script src="/assets/js/index.js"></script>

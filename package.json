@@ -1,0 +1,24 @@
+{
+  "name": "ubalt-idia-619",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": ".\\scripts\\Delete-Dist.ps1; npm run styles; npx @11ty/eleventy;",
+    "start": ".\\scripts\\Delete-Dist.ps1; npm run styles; eleventy --serve;",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "sass --style=compressed .\\src\\assets\\styles\\src\\main.scss .\\src\\_includes\\styles\\styles.css",
+    "styles:watch": "sass --watch --style=compressed .\\src\\assets\\styles\\src\\main.scss .\\dist\\assets\\styles\\styles.css",
+    "parcel-js": "parcel build .\\src\\assets\\js\\index.js --out-dir dist/assets/js --out-file index.js",
+    "parcel-watch": "npm run parcel-js-watch",
+    "parcel-js-watch": "parcel watch Assets/js/_parcel.js --out-dir wwwroot/js/ --out-file index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "clean-css": "^5.1.0",
+    "sass": "^1.26.5"
+  }
+}

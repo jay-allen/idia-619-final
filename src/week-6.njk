@@ -1,0 +1,88 @@
+---
+title: Assignment 6 - JSON
+layout: layouts/base.njk
+---
+
+<!-- 
+# Instructions
+Using the attached ZIP file, create a web page that displays the weather provided in the JSON file. 
+For full credit:
+* Read the JSON file
+* Display the date,
+* Temp
+* Precipitation chance and a weather icon from the zip file. 
+
+Just upload your HTML file as I'll have the icons and JSON locally.
+
+Precipitation is chance of precipitation (out of 100) and cloudiness 
+is percent sky coverage (out of 100).
+
+ -->
+
+<style>
+    body {
+        /* https://cssgradient.io/ */
+        background: rgb(218,0,0);
+        background: linear-gradient(35deg, rgba(218,0,0,1) 0%, rgba(255,145,0,1) 53%, rgba(255,246,101,1) 100%);
+    }
+    ul {
+        padding: 0;
+    }
+    .o-media {
+        margin-block-start: 2em;
+        background-color: #f2f2f2;
+    }
+    .o-media__img {
+        padding: 2em;
+        margin: auto;
+    }
+    .o-media__content {
+        display: block;
+        padding: 1em;
+        margin: auto;
+    }
+    .o-media__content > h2 {
+        padding: 1rem;
+        text-align: center;
+    }
+    .weather-detail {
+        padding: 1rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .weather-detail__label {
+        font-weight: bold;
+    }
+    @media screen and (min-width: 650px){
+        .o-media__content {
+            flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        }
+    }
+</style>
+
+<main>
+    <div class="o-wrapper">
+        
+        <div class="o-split">
+            <h1>Week 6 - JSON Weather</h1>
+        </div>
+
+        <!-- <div>
+            <img src="/assets/img/week-6/clear.png" alt="">
+            <img src="/assets/img/week-6/cloudy.png" alt="">
+            <img src="/assets/img/week-6/mostlysunny.png" alt="">
+            <img src="/assets/img/week-6/rain03.png" alt="">
+            <img src="/assets/img/week-6/thunderstorms01.png" alt="">
+        </div> -->
+
+        <div class="js-weather"></div>
+
+    </div>
+</main>
+
+<script src="/assets/js/week-6/index.js"></script>
