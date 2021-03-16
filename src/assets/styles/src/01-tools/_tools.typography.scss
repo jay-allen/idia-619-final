@@ -1,0 +1,8 @@
+@use 'tools.functions' as functions;
+@use  'sass:string';
+
+// Shorthand onto specific font-stacks.
+@mixin font-family() {
+
+    font-family: string.unquote(functions.font(base));
+}

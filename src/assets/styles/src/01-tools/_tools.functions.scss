@@ -1,0 +1,19 @@
+///*----------------------------------*\
+//  #FUNCTIONS
+//\*----------------------------------*/
+
+// Custom functions.
+
+@use '../00-settings/index' as settings;
+
+
+
+// Return Color
+@function color($key) {
+    @return map-get(settings.$colors, $key );
+}
+
+// Return Font
+@function font($key) {
+    @return map-get(settings.$fonts, $key );
+}

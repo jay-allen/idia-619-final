@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": ".\\scripts\\Delete-Dist.ps1; npm run styles; npx @11ty/eleventy;",
-    "start": ".\\scripts\\Delete-Dist.ps1; npm run styles; eleventy --serve;",
+    "build": "rm -rf ./dist & npm run styles; npx @11ty/eleventy;",
+    "start": "rm -rf ./dist & npm run watch:eleventy & npm run watch:styles",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "sass --style=compressed .\\src\\assets\\styles\\src\\main.scss .\\src\\_includes\\styles\\styles.css",
-    "styles:watch": "sass --watch --style=compressed .\\src\\assets\\styles\\src\\main.scss .\\dist\\assets\\styles\\styles.css",
-    "parcel-js": "parcel build .\\src\\assets\\js\\index.js --out-dir dist/assets/js --out-file index.js",
-    "parcel-watch": "npm run parcel-js-watch",
-    "parcel-js-watch": "parcel watch Assets/js/_parcel.js --out-dir wwwroot/js/ --out-file index.js"
+    "styles": "sass --style=compressed ./src/assets/styles/src/:./dist/assets/styles/",
+    "watch:styles": "sass --watch --style=compressed ./src/assets/styles/src/:./dist/assets/styles/",
+    "watch:eleventy": "eleventy --serve"
   },
   "keywords": [],
   "author": "",
