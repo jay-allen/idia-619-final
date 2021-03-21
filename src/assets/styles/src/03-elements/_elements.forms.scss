@@ -1,6 +1,7 @@
 form {
     width: 100%;
     margin-block-start: 1rem;
+    max-width: 66ch;
 }
 
 fieldset {
@@ -12,11 +13,13 @@ fieldset {
 label {
     display: block;
     font-weight: bold;
+    margin-block-end: .25rem;
 }
 
 input {
     display: block;
     padding: .5rem;
+    width: 100%;
 }
 
 input + label {

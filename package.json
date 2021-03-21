@@ -8,7 +8,7 @@
     "start": "rm -rf ./dist & npm run watch:eleventy & npm run watch:styles",
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "sass --style=compressed ./src/assets/styles/src/:./dist/assets/styles/",
-    "watch:styles": "sass --watch --style=compressed ./src/assets/styles/src/:./dist/assets/styles/",
+    "watch:styles": "sass --watch --style=compressed ./src/assets/styles/src/:./src/_includes/styles/",
     "watch:eleventy": "eleventy --serve"
   },
   "keywords": [],

@@ -1,5 +1,5 @@
 ---
-title: Assignment 7 -
+title: Assignment 7
 layout: layouts/base.njk
 ---
 
@@ -24,30 +24,45 @@ layout: layouts/base.njk
         font-size: 1.5rem;
         margin-block-start: 1em;
     }
+
+    /* https://projects.verou.me/css3patterns/#seigaiha */
+    .c-spotlight-result {
+        --shape: hsl(0, 0%, 97%);
+        --background: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 90%);
+        background-image:
+        radial-gradient(circle at 100% 150%, var(--shape) 24%, var(--background) 24%, var(--background) 28%, var(--shape) 28%, var(--shape) 36%, var(--background) 36%, var(--background) 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0    150%, var(--shape) 24%, var(--background) 24%, var(--background) 28%, var(--shape) 28%, var(--shape) 36%, var(--background) 36%, var(--background) 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50%  100%, var(--background) 10%, var(--shape) 10%, var(--shape) 23%, var(--background) 23%, var(--background) 30%, var(--shape) 30%, var(--shape) 43%, var(--background) 43%, var(--background) 50%, var(--shape) 50%, var(--shape) 63%, var(--background) 63%, var(--background) 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, var(--background) 5%, var(--shape) 5%, var(--shape) 15%, var(--background) 15%, var(--background) 20%, var(--shape) 20%, var(--shape) 29%, var(--background) 29%, var(--background) 34%, var(--shape) 34%, var(--shape) 44%, var(--background) 44%, var(--background) 49%, transparent 49%, transparent),
+        radial-gradient(circle at 0    50%, var(--background) 5%, var(--shape) 5%, var(--shape) 15%, var(--background) 15%, var(--background) 20%, var(--shape) 20%, var(--shape) 29%, var(--background) 29%, var(--background) 34%, var(--shape) 34%, var(--shape) 44%, var(--background) 44%, var(--background) 49%, transparent 49%, transparent);
+        background-size: 100px 50px;
+    }
+
 </style>
 
-<main>
-    <div class="o-wrapper">
+<div class="o-wrapper">
 
-        <div class="o-split">
-            <h1>Week 7 - Rapid API</h1>
-        </div>
-
-        <form>
-
-            <label for="zip">Zip</label>
-            <input id="zip" type="text">
-
-            <label for="city">City</label>
-            <input id="city" type="text">
-
-            <button type="submit">Get Weather</button>
-
-        </form>
-
-        <div class="[ c-spotlight-result ] [ u-hidden ] [ js-weather-results ]"></div>
-
+    <div class="o-split">
+        <h1>Week 7 - Rapid API</h1>
     </div>
-</main>
+
+    <form>
+
+        <label for="zip">Zip</label>
+        <input id="zip" type="text">
+
+        <label for="city">City</label>
+        <input id="city" type="text">
+
+        <button type="submit">Get Weather</button>
+
+    </form>
+
+    <div aria-live="assertive">
+        <div class="[ c-spotlight-result ] [ u-hidden ] [ js-weather-results ]"></div>
+    </div>
+
+</div>
 
 <script src="/assets/js/week-7/index.js"></script>

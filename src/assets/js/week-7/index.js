@@ -22,9 +22,15 @@ function getWeather(event) {
 	.then(data => {
 		console.log("data", data);
 
-		weatherDisplayLocation.classList.remove("u-hidden");
+		let markup;
+		if (data.cod.toString() === '404') {
+			markup = getErrorHTML(data);
+		}
+		if (data.cod.toString() === '200') {
+			markup = getWeatherHTML(data);
+		}
 
-		const markup = getWeatherHTML(data);
+		weatherDisplayLocation.classList.remove("u-hidden");
 		const newElement = appendHtml(markup, "div");
 		weatherDisplayLocation.innerHTML = "";
 		weatherDisplayLocation.appendChild(newElement);
@@ -64,6 +70,10 @@ function getWeatherHTML(data) {
 		<div class="result__temperature">${temperature}&deg;F</div>
 		<div class="result__description">${description}</div>
 	`
+}
+function getErrorHTML(data) {
+	const message 	= data.message || "Not Found";
+	return `<div class="result__error">${message}</div>`
 }
 
 function appendHtml(htmlString, elementType) {
