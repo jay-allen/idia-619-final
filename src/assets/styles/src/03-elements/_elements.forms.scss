@@ -1,5 +1,6 @@
 form {
     width: 100%;
+    margin-block-start: 1rem;
 }
 
 fieldset {
@@ -10,4 +11,36 @@ fieldset {
 
 label {
     display: block;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    padding: .5rem;
+}
+
+input + label {
+    margin-block-start: 1rem;
+}
+
+
+input + button {
+    margin-block-start: 1.5rem;
+}
+
+
+button[type="submit"] {
+    background-color:hsl(174, 72%, 56%);
+    border-color: hsl(174, 72%, 46%);
+    border-style: solid;
+    padding: .5rem 1rem;
+
+    &:hover {
+        background-color:hsl(174, 72%, 46%);
+    } 
+    
+    &:focus {
+        border-color:hsl(174, 72%, 66%);
+        outline-color:hsl(174, 72%, 36%);
+    }
 }

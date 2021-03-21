@@ -1,0 +1,23 @@
+
+
+.c-spotlight-result {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    margin-block-start: 1em;
+    background-color: hsl(0deg 0% 98%);
+    border: 15px solid hsl(54deg 98% 54%);
+}
+
+@media screen and (min-width: 650px){
+    .c-spotlight-result  {
+        font-size: 3rem;
+        padding: 25%
+    }
+}
+
+.c-spotlight-result > div {
+    width: 100%;
+}

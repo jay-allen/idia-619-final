@@ -4,3 +4,9 @@ html {
     background-color: #e7e7e7;
     color: #1d1d1d;
 }
+
+@media screen and (min-width: 650px){
+    html {
+        font-size: 112%;
+    }
+}

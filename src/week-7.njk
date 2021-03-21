@@ -1,0 +1,53 @@
+---
+title: Assignment 7 -
+layout: layouts/base.njk
+---
+
+<!-- 
+
+    Use the example that I made in the tutorial and add a field where users can enter a city name (or zip code...the example still works). Create a button that when clicked, changes the weather to the new city.
+
+    Hint: This is more about previous weeks than this week. The hard part won't be the API stuff (it's already done for you).
+
+    ALSO
+
+    Look at the RapidAPI and places like Programmable Web to write up a sentence or two about what you'd like your final project to be about.
+
+ -->
+
+<style>
+    .result__city {}
+
+    .result__temperature {}
+
+    .result__description {
+        font-size: 1.5rem;
+        margin-block-start: 1em;
+    }
+</style>
+
+<main>
+    <div class="o-wrapper">
+
+        <div class="o-split">
+            <h1>Week 7 - Rapid API</h1>
+        </div>
+
+        <form>
+
+            <label for="zip">Zip</label>
+            <input id="zip" type="text">
+
+            <label for="city">City</label>
+            <input id="city" type="text">
+
+            <button type="submit">Get Weather</button>
+
+        </form>
+
+        <div class="[ c-spotlight-result ] [ u-hidden ] [ js-weather-results ]"></div>
+
+    </div>
+</main>
+
+<script src="/assets/js/week-7/index.js"></script>

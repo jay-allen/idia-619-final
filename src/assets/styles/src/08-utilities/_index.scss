@@ -1,2 +1,7 @@
 
 @forward 'utilities.visibility';
+
+
+.u-flow * + * {
+    margin-block-start: 1rem;
+}
