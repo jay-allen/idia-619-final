@@ -1,0 +1,17 @@
+.c-input-group {
+
+}
+
+.c-input-group {
+
+    display: flex;
+
+    input {
+        display: inline-block;
+    }
+
+    input + button[type="submit"] {
+        display: inline-block;
+        margin: 0;
+    }
+}
