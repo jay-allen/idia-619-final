@@ -13,6 +13,7 @@ module.exports = function( eleventyConfig ){
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/web.config");
+    eleventyConfig.addPassthroughCopy("src/manifest.json");
     
     eleventyConfig.addWatchTarget("./src/assets/styles/src/");
     eleventyConfig.addWatchTarget("./src/assets/js/");
