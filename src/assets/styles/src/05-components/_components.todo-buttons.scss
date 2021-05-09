@@ -14,18 +14,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: hsl(0, 0%, 80%);
-        margin-block: 1em;
+        background-color: hsl(0, 0%, 97%);
+        margin-block-end: .5em;
+        -webkit-box-shadow: 2px 2px 15px 3px hsla(0, 0%, 48%, 0.75); 
+        box-shadow: 2px 2px 15px 3px hsla(0, 0%, 48%, 0.75);
     }
+    
     .list__delete {
-        background-color: hsl(34, 100%, 31%);
-        color: hsl(0, 0%, 11%);
+        background-color: hsl(271, 94%, 50%);
+        color: hsl(0, 0%, 100%);
         border-style: solid;
         padding: .5rem 1rem;
         text-transform: uppercase;
         
         &:hover {
-            background-color: hsl(34, 100%, 36%);
+            background-color: hsl(271, 94%, 58%);
         }
         &:focus {
 

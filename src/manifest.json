@@ -1,6 +1,6 @@
 {
-    "short_name": "Nothing To-do",
-    "name": "Nothing To-do",
+    "short_name": "Secret To-do",
+    "name": "Secret To-do",
     "icons": [
         {
             "src": "/assets/img/icon-192.png",
@@ -15,8 +15,8 @@
     ],
     "start_url": "/?source=pwa",
     "background_color": "#3367D6",
+    "theme_color": "#3367D6",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6",
-    "description": "A private to-do list"
+    "description": "A secret to-do list"
 }

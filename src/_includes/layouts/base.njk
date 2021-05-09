@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Jay Allen</title>
+    <title>{{ title }}</title>
     
     {% set css %}
     {% include "styles/main.css" %}
@@ -18,19 +18,14 @@
 </head>
 <body>
 
-    <!-- <header>
-        <div class="container">
-            <nav class="c-nav-main">
-                <ul>
-                    <li><a href="#"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header> -->
+    <header class="o-wrapper o-split">
+        <h1>Secret Todo</h1>
+    </header>
 
     <main>
         {{ content | safe }}
     </main>
-    
+
+
 </body>
 </html>

@@ -5,6 +5,9 @@ const listClass = "list__item";
 
 submitBtn.addEventListener('click', event => submitForm(event) );
 
+addStoredFromLocalStorage();
+setupServiceWorker();
+
 function createHtml(htmlString, elementType) {
     let element = document.createElement(elementType);
     element.innerHTML = htmlString;
@@ -15,15 +18,11 @@ function createHtml(htmlString, elementType) {
 
 function submitForm(event) {
     event.preventDefault();
-
     addItem(itemList, itemInput.value);
-
 }
 
 function addItem(listElem, inputValue) {
-
     // Get HTML
-    // let inputValue = inputElem.value;
     const html = getHtml(inputValue);
 
     // create new element
@@ -63,6 +62,18 @@ function setLocalStorge() {
 function addStoredFromLocalStorage() {
     const savedItems = JSON.parse(localStorage.getItem('listItems'));
     savedItems.forEach( item => { addItem(itemList, item) });
-}   
+}
 
-addStoredFromLocalStorage();
+function setupServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+    }
+}

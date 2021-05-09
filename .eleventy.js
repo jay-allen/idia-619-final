@@ -11,6 +11,7 @@ module.exports = function( eleventyConfig ){
     eleventyConfig.addPassthroughCopy("src/assets/styles/*.css*");
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
     eleventyConfig.addPassthroughCopy("src/assets/js");
+    eleventyConfig.addPassthroughCopy("src/service-worker.js");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/web.config");
     eleventyConfig.addPassthroughCopy("src/manifest.json");

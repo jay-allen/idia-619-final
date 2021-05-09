@@ -1,28 +1,16 @@
 ---
-title: Final Project
+title: Secret Todo
 layout: layouts/base.njk
 ---
-
-<div class="o-wrapper c-todo">
-
-    <div class="o-split">
-        <h1>Final Project</h1>
-    </div>
-
-    <form>
-
-        <label for="task">Task</label>
-        <div class="c-input-group">
-            <input id="task" type="text">
-            <button type="submit">Add</button>
+<div class=" c-todo">
+    <form class="c-todo-add">
+        <div class="o-wrapper c-input-group">
+            <input id="task" type="text" placeholder="Add a task" aria-label="Add task">
+            <button type="submit">&#43; Add</button>
         </div>
-
     </form>
-
-    <div aria-live="assertive">
+    <div class="o-wrapper c-todo-list" aria-live="assertive">
         <ul class="[ c-list ] [ u-hidden ] [ js-list ]"></ul>
     </div>
-
 </div>
-
 <script src="/assets/js/index.js"></script>
