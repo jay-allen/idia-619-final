@@ -65,6 +65,7 @@ function addStoredFromLocalStorage() {
 }
 
 function setupServiceWorker() {
+    // https://developers.google.com/web/fundamentals/primers/service-workers
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
